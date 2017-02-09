@@ -155,6 +155,7 @@ var state = {
   near: '',
   offset: 0,
   category_filter: '',
+  business_pick: '',
 
 }
 
@@ -178,14 +179,22 @@ function displayResults() {
   $('.js-results-container').toggle('hidden');
 }
 
-// <a href=""></a>
-
 function populateResultList() {
   state.businesses.forEach(function(business) {
     $('.js-results-list').append('<li><h3>' + business.name + '</h3>' + 
                                  '<img src="' + business.image_url + '">' +
                                  '<p>' + business.rating + '</p></li>')
   });
+}
+
+function displayFinalChoice() {
+  $('header h1').toggle('hidden');
+  $('header p').toggle('hidden');
+  $('.js-results-container').toggle('hidden');
+  $('.final-choice-page').toggle('hidden');
+  $('.final-choice-page .js-restaurant-choice').text(state.business_pick.name);
+  $('.final-choice-page img').attr('src', state.business_pick.image_url);
+  $('.final-choice-page .rating').text(state.business_pick.rating);
 }
 
 
@@ -218,18 +227,16 @@ function initializeEventListeners() {
   });
 
   $('.js-results-list').on('click', 'li img', function(e) {
-    // console.log('hello'); // works
 
     var image = $(this).attr('src');
-    
     state.businesses.forEach(function(business, index) {
       if (business.image_url === image) {
-        console.log(true);
+        state.business_pick = business;
+        console.log(business);
       }
     });
-    // console.log(image.match(/<[^>]+>/)[0]);
-    // console.log(image.split('"'))
 
+    displayFinalChoice();
   });
 
 }
