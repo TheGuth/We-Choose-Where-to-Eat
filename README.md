@@ -14,7 +14,7 @@ Why is this app useful? If you struggle with deciding on a place to eat, then wh
 
 The initial wireframes can be seen below:
 
-![Screenshot](https://github.com/TheGuth/We-Choose-Where-to-Eat/blob/master/images/home-page-wirefram.png?raw=true)
+<!-- ![Screenshot](https://github.com/TheGuth/We-Choose-Where-to-Eat/blob/master/images/home-page-wirefram.png?raw=true) -->
 
 ## Working Prototype
 
