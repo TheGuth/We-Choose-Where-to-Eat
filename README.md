@@ -20,7 +20,7 @@ You can access a working prototype of the app here:
 ##Functionality
 The app's functionality includes:
 
-*
+* 
 *
 
 ##Technical
@@ -31,6 +31,43 @@ The app is built entirely in jQuery and makes use of AJAX calls to *Yelp*'s Open
 
 this is v1.0 of the app, but future enhancements are expected to include:
 
-*
-*
-*
+Features to Implement
+
+Done * create wider search parameter for random function (currently only grabbing from 6 results)
+
+4 * fixed delay from ajax call
+2 * Add Restaurants website URL
+3 * Add a choose again button on final page
+7 * General css/cleaning up code/app
+6 * Google Maps (map with marker for final restaurant pick);
+5 * Add mobile break points for css
+done * comment code base
+* Add css to buttons to make them look like they click
+* update html code to use template string in app.js
+* dont' have code lines longer than 80 characters
+
+Done * make address and phone clickable.
+
+Done * Style of food filter to work with AJAX request
+Done * Get offset to work with AJAX request            
+Done * Condense results page to 6 results
+Done * add synopsis to each restaurant on results page
+Done * Add functionality to next and prev buttons on results page
+
+
+Future:
+
+* google map api to show result.
+* Remember Location (cookie used to record user location for future use);
+* optional parameters (radius_filter up to 25 miles) & (deals_filter switch boolean on whether to exclusively look for businesses with deals or not)
+* optional parameters (sort mode: 0=Best(default), 1=Distance, 2=Highest Rated)
+
+
+
+
+
+
+
+
+
+

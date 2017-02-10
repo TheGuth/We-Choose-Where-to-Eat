@@ -8,44 +8,48 @@
     <script type="text/javascript" src="js/authentication.js"></script>
 </head>
 <body>
-  <header>
-    <h1>We Choose Where to Eat</h1>
-    <p>Welcome to the website that selects a restaurant based off your location and the style of restaurant you like.</p>
-  </header>
 
   <main>
-    <div class="home-page">
-      <aside class="home-image-conatiner">
-        <img src="">
-      </aside>
-      <section class="search-container">
-        <form class="js-query" action="#">
-          <label for="search-location">Location:</label>
-          <input id="js-search-location" type="text" name="search-location" value="" placeholder="zipcode or city" required>
-          <select class="js-style-choice" name="food-style">
-            <option value="" selected>All</option>
-            <option value="cajun">Cajun</option>
-            <option value="caribbean">Caribbean</option>
-            <option value="american">American</option>
-            <option value="barbeque">Barbeque</option>
-            <option value="bistros">Bistros</option>
-            <option value="chinese">Chinese</option>
-            <option value="japanese">Japanese</option>
-            <option value="diners">Diners</option>
-            <option value="fastfood">Fast Food</option>
-            <option value="french">French</option>
-            <option value="german">German</option>
-            <option value="italian">Italian</option>
-            <option value="mexican">Mexican</option>
-          </select>
-          <button id="js-search-btn" type="submit" name="search">Search</button>
-        </form>
-      </section>
+    <div class="home-page-container">
+      <header class="home-page-header">
+        <h1>Cuisine Quest</h1>
+        <p>Welcome to the website that selects a restaurant based off your location and the style of food you like.</p>
+      </header>
+
+    
+      <div class="home-page">
+        <aside class="home-image-conatiner">
+          <img src="http://cdn.dailyheadlines.net/wp-content/uploads/2016/03/sns032313health.jpg">
+        </aside>
+        <section class="search-container">
+          <form class="js-query" action="#">
+            <label for="search-location">Location</label>
+            <input id="js-search-location" type="text" name="search-location" value="" placeholder="zip code or city" required>
+            <label for="food-style">Food Style</label>
+            <select class="js-style-choice" name="food-style">
+              <option value="" selected>All</option>
+              <option value="cajun">Cajun</option>
+              <option value="caribbean">Caribbean</option>
+              <option value="tradamerican">American</option>
+              <option value="bbq">Barbeque</option>
+              <option value="chinese">Chinese</option>
+              <option value="japanese">Japanese</option>
+              <option value="diners">Diners</option>
+              <option value="hotdogs">Fast Food</option>
+              <option value="french">French</option>
+              <option value="german">German</option>
+              <option value="italian">Italian</option>
+              <option value="mexican">Mexican</option>
+            </select>
+            <button id="js-search-btn" type="submit" name="search">Search</button>
+          </form>
+        </section>
+      </div>
     </div>
 
     <section class="choice-page">
-      <button class="user-pick hidden">I'll Pick</button>
-      <button class="computer-pick hidden">Pick For Me</button>
+      <button class="user-pick hidden">See Results</button>
+      <button class="computer-pick hidden">Randomly Pick</button>
     </section>
 
     <section class="js-results-container hidden">
@@ -62,9 +66,10 @@
       <h2 class="js-restaurant-choice"></h2>
       <img src="">
       <p class="rating"></p>
+      <p class="address"></p>
+      <p class="phone"></p>
       <div class="final-choice-location">
-        <h3>Restaurant Location</h3>
-
+        <!-- <h3>Restaurant Location</h3> -->
       </div>
     </section>
   </main>

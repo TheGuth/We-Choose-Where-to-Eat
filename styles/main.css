@@ -1,3 +1,176 @@
+/* GLOBAL RULES */
+
+button {
+  box-shadow: 0px 0px 0px 2px #9fb4f2;
+  background-color: #7892c2;
+  border-radius: 10px;
+  border: 1px solid #4e6096;
+  display: inline-block;
+  cursor: pointer;
+  color: #ffffff;
+  font-family: Arial;
+  font-size: 19px;
+  /*padding: 12px 37px;*/
+  text-decoration: none;
+  text-shadow: 0px 1px 0px #283966;
+}
+button:hover {
+  background-color:#476e9e;
+}
+
 .hidden {
   display: none;
 }
+
+/* Home Page Selectors */
+
+.home-page img {
+  max-width: 400px;
+  height: 300px;
+  margin: 10px 0 30px;
+  border: 5px solid rgba(0,86,137,1);
+  border-radius: 5%;
+}
+
+.home-page-container {
+  background-color: white;
+  max-width: 600px;
+  margin: 20px auto;
+  text-align: center;
+  border-radius: 15%;
+  padding: 5px;
+}
+
+.home-page-container p {
+  width: 300px;
+  text-align: center;
+  margin: 0 auto 15px;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,86,137,1);
+}
+
+label {
+  display: block;
+  margin: 5px 0;
+}
+
+select {
+  display: block;
+  margin: 5px 0 10px 43%;
+}
+
+.home-page button {
+  margin-top: 5px;
+  width: 120px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 18px;
+}
+
+/* Choice Page Selectors */
+
+.choice-page {
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.choice-page button {
+  width: 200px;
+  height: 100px;
+  margin: 20px;
+  border-radius: 20%;
+  font-size: 24px;
+}
+
+
+/* Results Page Selectors*/
+
+.js-results-container {
+  background-color: white;
+  border-radius: 5%;
+  max-width: 600px;
+  padding-bottom: 5px;
+  margin: 0 auto;
+}
+
+.js-results-list {
+
+}
+
+.js-results-list li {
+  box-sizing: border-box;
+  display: inline-block;
+  width: 48%;
+  margin: 0 5px;
+}
+
+.js-results-list h3 {
+
+}
+
+.js-results-list img {
+  width: 100px;
+  height: 100px;
+  border: 3px solid rgba(0,86,137,1);
+}
+
+.js-next-and-prev-buttons {
+  text-align: center;
+  margin: 0 40px 20px;
+}
+
+.js-next-and-prev-buttons button {
+  width: 75px;
+  height: 30px;
+  border-radius: 25%;
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+.js-prev-btn {
+  margin-right: 160px;
+}
+
+.js-next-btn {
+  margin-left: 160px;
+}
+
+/* Final Choice Page */
+
+.final-choice-page {
+  width: 600px;
+  background-color: white;
+  text-align: center;
+  margin: 10px auto;
+  padding: 20px 0;
+  border-radius: 25%;
+}
+
+/* Google Map API Style */
+
+#map {
+  height: 400px;
+  width: 400px;
+  margin: 0 auto;
+ }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
