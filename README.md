@@ -35,19 +35,21 @@ Features to Implement
 
 Done * create wider search parameter for random function (currently only grabbing from 6 results)
 
-4 * fixed delay from ajax call
-2 * Add Restaurants website URL
-3 * Add a choose again button on final page
-7 * General css/cleaning up code/app
-6 * Google Maps (map with marker for final restaurant pick);
-5 * Add mobile break points for css
-done * comment code base
-* Add css to buttons to make them look like they click
+* add pointer to cursor when going over result item.
+* add stars * to ratings
+* location validation
+
+3 * Add Restaurants website URL
+* General css/cleaning up code/app
 * update html code to use template string in app.js
 * dont' have code lines longer than 80 characters
 
+Done * Add a choose again button on final page and fix js for it
+Done * Add mobile break points for css
+Done * Add css to buttons to make them look like they click
+Done * Add media queries
+Done * comment code base
 Done * make address and phone clickable.
-
 Done * Style of food filter to work with AJAX request
 Done * Get offset to work with AJAX request            
 Done * Condense results page to 6 results
@@ -57,6 +59,7 @@ Done * Add functionality to next and prev buttons on results page
 
 Future:
 
+* fixed delay from ajax call
 * google map api to show result.
 * Remember Location (cookie used to record user location for future use);
 * optional parameters (radius_filter up to 25 miles) & (deals_filter switch boolean on whether to exclusively look for businesses with deals or not)

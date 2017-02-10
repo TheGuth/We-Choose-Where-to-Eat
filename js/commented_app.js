@@ -1,5 +1,84 @@
+// user enters article query
+// pulls up list of articles 5-10
+// has next and prev button to load the next 5-10 articles
 
-// Cuisine Quest using Yelp API
+// if user clicks on an article it will take them to another
+// screen displaying what sources that particular article
+// cited. The user then can click a button to proceed to 
+// the actual article on New York Times Website.
+
+// User can also click a back button that will take them to
+// the previous page with the 5-10 articles.
+
+// possibly opern source React Component
+// use news api grab url, go into url find all article text select all
+// a elements and then sort a element urls as sources.
+
+//////////////////////////////////////////////
+
+// user enters article query
+// displays a list of most common citations among 100 most
+// rescent articles.
+// also displays a list of most common writers for the given
+// topic.
+
+// var newYorkTimesUrl = 'https://api.nytimes.com/svc/search/v2/articlesearch.json'
+
+// var state = {
+//   query: {
+//     'api-key': '9155b4fa4d3043e690af47c195a7f7a7',
+//     q: 'Trump',
+//     // offset: 0, // if set to 1 gives next 10 results.
+
+//   },
+// }
+
+// function getDataFromApi(searchTerm, callback) {
+//   state.query.q = searchTerm;
+
+//   $.getJSON(newYorkTimesUrl, state.query, callback);
+// }
+
+// function displayData(data) {
+//   console.log(data);
+// }
+
+// $(function() {
+//   getDataFromApi(state.query.q, displayData);
+// });
+
+// import someOject from 'someFIle.js'; //es6 
+// var someObject = require('./someFIle'); //es5
+////////////////////////////////////
+
+// Yelp API
+
+// Consumer Key:  JRfPQyRFca4z4jtJEeiCjA
+
+// Consumer Secret: pHfG8vmxkQN_4HBlHkmxwCQHMEA
+
+// Token: B9rsoCApBausDw-RSRROWGh0koyogVqg
+
+// Token Secret:  4VWQZ_IYvEyeA8BXTuhGwlggdJE
+
+// ///////////////////////////////
+
+// each request must have:
+
+// 1. oauth_consumer_key
+
+// 2. oauth_token
+
+// 3. oauth_signautre_method
+
+// 4. oauth_signature
+
+// 5. oauth_timestamp
+
+// 6. oauth_nounce
+
+///////////////////////////////////////////////
+
 
 // auth object containing my consumberkey, token, and secrets
 // wouldn't want this exposed in an application.
@@ -66,13 +145,6 @@ function constructParameters(location, style, offset, limit) {
   callApi();
 }
 
-// updates our state object with the data we receive from our
-// AJAX request.
-function initializeState(data) {
-  state.data = data
-  state.businesses = state.data.businesses;
-}
-
 // State object that is updated through various functions
 var state = {
   data: '',
@@ -84,6 +156,25 @@ var state = {
   limit: 6,
   category_filter: '',
   business_pick: '',
+  // location: 'home_page' 
+  // home_page:
+  // choice_page:
+  // results_page:
+  // final_page:
+
+}
+
+function randomRestaurant() {
+  randomIndex = Math.floor(Math.random() * 6); 
+  // provides a random number between 0 and 19
+  state.business_pick = state.businesses[randomIndex];
+}
+
+// updates our state object with the data we receive from our
+// AJAX request.
+function initializeState(data) {
+  state.data = data
+  state.businesses = state.data.businesses;
 }
 
 // updates the DOM so that our header and paragraph populate with new text.
@@ -121,6 +212,7 @@ function toggleFinalPage() {
   $('.final-choice-page').toggle('hidden');
 }
 
+// updates infromation on the final page based off the business selected
 function displayFinalChoice() {
   toggleFinalPage();
   $('.final-choice-page .js-restaurant-choice').text(state.business_pick.name);
@@ -134,14 +226,10 @@ function displayFinalChoice() {
   $('.final-choice-page .address').html('<b>Address</b><br>' + '<a href="http://maps.google.com/maps?q=' + 
                                         state.business_pick.location.display_address.join(', ').split(' ').join('+') +
                                         '">' + state.business_pick.location.display_address.join(', ') + '</a>');
+
 }
 
-function randomRestaurant() {
-  randomIndex = Math.floor(Math.random() * 6); 
-  // provides a random number between 0 and 19
-  state.business_pick = state.businesses[randomIndex];
-}
-
+// function that holds all event listeners
 function initializeEventListeners() {
 
   // listens for the search button on home page
@@ -213,16 +301,13 @@ function initializeEventListeners() {
 
     displayFinalChoice();
   });
-
-  $('.js-restart-btn').click(function() {
-    window.location.reload(false);
-  });
 }
 
 // loads when document is ready.
 $(function() {
   initializeEventListeners();
 });
+
 
 
 
