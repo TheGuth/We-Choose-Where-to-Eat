@@ -1,4 +1,5 @@
-# yelp-api
+# Cuisine Quest
+
 Thinkful (https://www.thinkful.com) Unit 1 Portfolio Exercise - jQuery app integrating with *Yelp*'s Open Platform API
 
 ##Background
