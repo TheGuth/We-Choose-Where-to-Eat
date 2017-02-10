@@ -14,9 +14,21 @@ Why is this app useful? If you struggle with deciding on a place to eat, then wh
 
 The initial wireframes can be seen below:
 
+[Initial WireFrames](https://github.com/TheGuth/We-Choose-Where-to-Eat/tree/master/images/Wireframes)
+
 <!-- ![Screenshot](https://github.com/TheGuth/We-Choose-Where-to-Eat/blob/master/images/home-page-wirefram.png?raw=true) -->
 
+## Mobile UX
+
+Pictures of the website for mobile devices can be seen below:
+
+[Mobile pictures](https://github.com/TheGuth/We-Choose-Where-to-Eat/tree/master/images/Mobile_pictures)
+
 ## Working Prototype
+
+Pictures of the website can be seen below:
+
+[Website pictures](https://github.com/TheGuth/We-Choose-Where-to-Eat/tree/master/images/Website_pictures)
 
 You can access a working prototype of the app here: 
 
