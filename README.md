@@ -64,18 +64,18 @@ this is v1.0 of the app, but future enhancements are expected to include:
 
 ###Completed
 
-Done * create wider search parameter for random function (currently only grabbing from 6 results)
-Done * Add a choose again button on final page and fix js for it
-Done * Add mobile break points for css
-Done * Add css to buttons to make them look like they click
-Done * Add media queries
-Done * comment code base
-Done * make address and phone clickable.
-Done * Style of food filter to work with AJAX request
-Done * Get offset to work with AJAX request       
-Done * Condense results page to 6 results
-Done * add synopsis to each restaurant on results page
-Done * Add functionality to next and prev buttons on results page
+* create wider search parameter for random function (currently only grabbing from 6 results)
+* Add a choose again button on final page and fix js for it
+* Add mobile break points for css
+* Add css to buttons to make them look like they click
+* Add media queries
+* comment code base
+* make address and phone clickable.
+* Style of food filter to work with AJAX request
+* Get offset to work with AJAX request       
+* Condense results page to 6 results
+* add synopsis to each restaurant on results page
+* Add functionality to next and prev buttons on results page
 
 
 ###Future:
