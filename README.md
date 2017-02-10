@@ -14,11 +14,25 @@ Why is this app useful? If you struggle with deciding on a place to eat, then wh
 
 The initial wireframes can be seen below:
 
+[Initial WireFrames](https://github.com/TheGuth/We-Choose-Where-to-Eat/tree/master/images/Wireframes)
+
 <!-- ![Screenshot](https://github.com/TheGuth/We-Choose-Where-to-Eat/blob/master/images/home-page-wirefram.png?raw=true) -->
+
+## Mobile UX
+
+Pictures of the website for mobile devices can be seen below:
+
+[Mobile pictures](https://github.com/TheGuth/We-Choose-Where-to-Eat/tree/master/images/Mobile_pictures)
 
 ## Working Prototype
 
-You can access a working prototype of the app here: 
+Pictures of the website can be seen below:
+
+[Website pictures](https://github.com/TheGuth/We-Choose-Where-to-Eat/tree/master/images/Website_pictures)
+
+You can access a working prototype of the app here:
+
+[Cuisine Quest](https://theguth.github.io/We-Choose-Where-to-Eat/)
 
 ##Functionality
 The app's functionality includes:
@@ -71,10 +85,6 @@ Done * Add functionality to next and prev buttons on results page
 * Remember Location (cookie used to record user location for future use);
 * optional parameters (radius_filter up to 25 miles) & (deals_filter switch boolean on whether to exclusively look for businesses with deals or not)
 * optional parameters (sort mode: 0=Best(default), 1=Distance, 2=Highest Rated)
-
-
-
-
 
 
 
