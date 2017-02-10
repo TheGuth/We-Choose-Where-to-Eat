@@ -30,7 +30,9 @@ Pictures of the website can be seen below:
 
 [Website pictures](https://github.com/TheGuth/We-Choose-Where-to-Eat/tree/master/images/Website_pictures)
 
-You can access a working prototype of the app here: 
+You can access a working prototype of the app here:
+
+[Cuisine Quest](https://theguth.github.io/We-Choose-Where-to-Eat/)
 
 ##Functionality
 The app's functionality includes:
