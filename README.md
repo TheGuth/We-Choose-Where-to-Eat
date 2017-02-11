@@ -40,7 +40,7 @@ The app's functionality includes:
 * Grabs and displays restaurants from user entered location and style preferences.
 * Lists 6 restaurants at a time displaying rating, review snipped, and name.
 * Allows for the user to randomly select a restaurant.
-* When a user selects or has a restaurant randomly assigned to them, they will be displayed with a phone number, address, and website url.
+* When a user selects or has a restaurant randomly assigned to them, they will be displayed with a phone number and address.
 
 ##Technical
 
@@ -52,6 +52,7 @@ this is v1.0 of the app, but future enhancements are expected to include:
 
 ###Features to Implement
 
+* Add website url if available
 * add pointer to cursor when going over result item.
 * add stars * to ratings
 * location validation
@@ -78,7 +79,7 @@ this is v1.0 of the app, but future enhancements are expected to include:
 * Add functionality to next and prev buttons on results page
 
 
-###Future:
+###Future developments:
 
 * fixed delay from ajax call
 * google map api to show result.
