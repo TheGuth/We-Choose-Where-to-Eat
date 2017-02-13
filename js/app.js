@@ -3,7 +3,7 @@
 
 // auth object containing my consumberkey, token, and secrets
 // wouldn't want this exposed in an application.
-var auth = {
+const auth = {
 
   consumerKey : "JRfPQyRFca4z4jtJEeiCjA",
   consumerSecret : "pHfG8vmxkQN_4HBlHkmxwCQHMEA",
@@ -20,9 +20,9 @@ var auth = {
 // location, style, and offset whenever we call constructParameters
 // We will also call callApi() function.)
 function constructParameters(location, style, offset, limit) {
-  var terms = 'Restaurants';
-  var near = location;
-  var accessor = {
+  const terms = 'Restaurants';
+  const near = location;
+  const accessor = {
     consumerSecret : auth.consumerSecret,
     tokenSecret : auth.accessTokenSecret
   };
@@ -38,7 +38,7 @@ function constructParameters(location, style, offset, limit) {
   parameters.push(['oauth_token', auth.accessToken]);
   parameters.push(['oauth_signature_method', 'HMAC-SHA1']);
 
-  var message = {
+  const message = {
     'action' : 'https://api.yelp.com/v2/search',
     'method' : 'GET',
     'parameters' : parameters
@@ -46,13 +46,13 @@ function constructParameters(location, style, offset, limit) {
 
   OAuth.setTimestampAndNonce(message);
   OAuth.SignatureMethod.sign(message, accessor);
-  var parameterMap = OAuth.getParameterMap(message.parameters);
+  const parameterMap = OAuth.getParameterMap(message.parameters);
   parameterMap.oauth_signature = OAuth.percentEncode(parameterMap.oauth_signature)
 
   // callApi function sends AJAX request with the callback
   // callback function being initializeState.
   function callApi() {
-    var data = $.ajax({
+    const data = $.ajax({
       'url' : message.action,
       'data' : parameterMap,
       'cache' : true,
@@ -77,7 +77,7 @@ function initializeState(data) {
 var state = {
   data: '',
   businesses: [],
-  currentSearch: [],
+  // currentSearch: [],
   style: '',
   near: '',
   offset: 0,
