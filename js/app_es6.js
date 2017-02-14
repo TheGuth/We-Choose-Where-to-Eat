@@ -174,7 +174,7 @@ function initializeEventListeners(state) {
   $('.js-results-list').on('click', 'li img', function(event) {
     var image = $(this).attr('src');
     state.businesses.forEach((business, index) => {
-      if (business.imagr_url === image) {
+      if (business.image_url === image) {
         state.business_pick = business;
       }
     });
