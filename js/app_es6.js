@@ -102,6 +102,7 @@ function populateResultList({businesses}) {
 function displayFinalChoice({business_pick}) {
   console.log(business_pick);
   $('.js-results-container').hide();
+  $('.choice-page').hide();
   $('.final-choice-page').show();
 
   $('.final-choice-page .js-restaurant-choice').text(business_pick.name);
