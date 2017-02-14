@@ -69,29 +69,127 @@ function initializeState(data) {
 state = {
   data: '',
   businesses: [],
-  searchParameters: {
-    style: '',
-    near: '',
-    offset: 0,
-    limit: 6,
-    category_filter: '',
-    sort: '',
-    radius_filter: ''
-  },
+  style: '',
+  near: '',
+  offset: 0,
+  limit: 6,
+  category_filter: '',
+  sort: '',
+  radius_filter: '',
   currentPage: 'homePage',
   possiblePages: ['homePage', 'choicePage', 'resultsPage', 'finalPage'],
   business_pick: '',
 }
 
+function displayChoice(state) {
+  $('.choice-page').show();
+}
+
+function displayResults(state) {
+  $('.choice-page').hide();
+  $('.js-results-container').show();
+}
+
+function populateResultList({businesses}) {
+  businesses.forEach((business) => {
+    console.log(business);
+    $('.js-results-list').append(`<li><h3>${business.name}</h3><img src="${business.image_url}">
+                                 <p class="business-snippet"><b>Review Snippet:</b>${business.snippet_text}</p>
+                                 <p><b>Rating:</b>${business.rating}/5</p></li>`);
+  });
+}
+
+function displayFinalChoice({business_pick}) {
+  console.log(business_pick);
+  $('.js-results-container').hide();
+  $('.final-choice-page').show();
+
+  $('.final-choice-page .js-restaurant-choice').text(business_pick.name);
+  $('.final-choice-page img').attr('src', business_pick.image_url);
+  $('.final-choice-page .rating').html(`<b>Rating</b><br>${business_pick.rating}`);
+
+  $('.final-choice-page .phone').html(`<b>Phone</b><br><a href="tel: ${business_pick.display_phone}
+                                       ">${business_pick.display_phone}</a>`);
+
+  $('.final-choice-page .address').html(`<b>Address</b><br><a href="http://maps.google.com/maps?q= 
+                                         ${business_pick.location.display_address.join(', ').split(' ').join('+')}
+                                        ">${state.business_pick.location.display_address.join(', ')}</a>`);
+}
+
+function randomRestaurant({businesses}) {
+  randomIndex = Math.floor(Math.random() * 6);
+  state.business_pick = businesses[randomIndex];
+}
+
+function resetList() {
+  constructParameters(state.near, state.style, state.offset, state.limit);
+  $('.js-results-list').empty();
+  setTimeout(() => {
+      populateResultList(state);
+    }, 1000)
+}
+
+function initializeEventListeners(state) {
+  $('.js-query').submit(function(event) {
+    event.preventDefault();
+
+    state.search = $(this).serializeArray();
+    // creates search in state set to an array which holds the search values for location and style
+    state.near = state.search[0].value;
+    state.style = state.search[1].value;
+    $('.home-page').hide();
+    displayChoice();
+
+    constructParameters(state.near, state.style, state.offset, state.limit)
+  });
+
+  $('.user-pick').click(function(event) {
+    displayResults(state);
+    populateResultList(state);
+  });
+
+  $('.computer-pick').click(function(event) {
+    $('.js-results-container').show();
+    constructParameters(state.near, state.style, state.offset, 20);
+    setTimeout(() => {
+      randomRestaurant(state);
+      displayFinalChoice(state);
+    }, 500)
+  });
+
+  $('.js-prev-btn').click(function(event) {
+    if (state.offset >= 6) {
+      state.offset -= 6
+      resetList();
+    }
+  });
+
+  $('.js-next-btn').click(function(event) {
+    state.offset += 6;
+    resetList();
+  });
 
 
+  $('.js-results-list').on('click', 'li img', function(event) {
+    var image = $(this).attr('src');
+    state.businesses.forEach((business, index) => {
+      if (business.imagr_url === image) {
+        state.business_pick = business;
+      }
+    });
 
+    displayFinalChoice(state);
+  });
 
+  $('.js-restart-btn').click(function(event) {
+    window.location.reload(false);
+    // reloads webapp from cach.
+  });
+}
 
-
-
-
-
+$(function() {
+  initializeEventListeners(state);
+});
 
 
 

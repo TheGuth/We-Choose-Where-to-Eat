@@ -1,0 +1,89 @@
+<html>
+<head>
+  <title>Cuisine Quest</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" type="text/css" href="styles/main.css">
+   <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
+   <script type="text/javascript" src="js/sha1.js"></script>
+    <script type="text/javascript" src="js/oauth.js"></script>
+    <script type="text/javascript" src="js/authentication.js"></script>
+</head>
+<body>
+
+  <main>
+    <div class="home-page-container">
+      <div class="home-page">
+        <div class="home-page-header">
+          <h1>Cuisine Quest</h1>
+          <p>Welcome to the website that selects a restaurant based off your location and the style of food you like.</p>
+        </div>
+        <aside class="home-image-conatiner">
+          <img src="http://cdn.dailyheadlines.net/wp-content/uploads/2016/03/sns032313health.jpg">
+        </aside>
+        <section class="search-container">
+          <form class="js-query" action="#">
+            <label for="search-location">Location</label>
+            <input id="js-search-location" type="text" name="search-location" value="" placeholder="zip code or city" required>
+            <label for="food-style">Food Style</label>
+            <select class="js-style-choice" name="food-style">
+              <option value="" selected>All</option>
+              <option value="cajun">Cajun</option>
+              <option value="caribbean">Caribbean</option>
+              <option value="tradamerican">American</option>
+              <option value="thai">Thai</option>
+              <option value="bbq">Barbeque</option>
+              <option value="chinese">Chinese</option>
+              <option value="japanese">Japanese</option>
+              <option value="diners">Diners</option>
+              <option value="hotdogs">Fast Food</option>
+              <option value="french">French</option>
+              <option value="german">German</option>
+              <option value="italian">Italian</option>
+              <option value="mexican">Mexican</option>
+            </select>
+            <button id="js-search-btn" type="submit" name="search">Search</button>
+          </form>
+        </section>
+      </div>
+    </div>
+
+    <section class="choice-page hidden">
+      <div class="choice-page-header">
+        <h1>Choose Wisely</h1>
+        <p>Please select whether you want to see a list of nearby restaurants or have a restaurant randomly selected for you.</p>
+      </div>
+      <button class="user-pick">See Results</button>
+      <button class="computer-pick">Randomly Pick</button>
+    </section>
+
+    <section class="js-results-container hidden">
+      <div class="results-page-header">
+        <h1>Results</h1>
+        <p>Results show 6 restaurants at a time: Please select the restaurant you would like to go to.</p>
+      </div>
+      <ul class="js-results-list">
+      </ul>
+      <div class="js-next-and-prev-buttons">
+        <button class="js-prev-btn">prev</button>
+        <button class="js-next-btn">next</button>
+      </div>
+    </section>
+
+    <section class="final-choice-page hidden">
+      <h2>Your Choice</h2>
+      <h2 class="js-restaurant-choice"></h2>
+      <img src="">
+      <p class="rating"></p>
+      <p class="address"></p>
+      <p class="phone"></p>
+      <div class="final-choice-location">
+        <!-- <h3>Restaurant Location</h3> -->
+      </div>
+      <button class='js-restart-btn'>Choose Again</button>
+    </section>
+  </main>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script type="text/javascript" src="js/app_es6.js"></script>
+</html>
